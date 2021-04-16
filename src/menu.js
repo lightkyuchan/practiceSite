@@ -1,9 +1,6 @@
 'use strict'
 
-let index     = 10;
-let length    = 0;
-let pageCount = 0;
-let count     = 10;
+let newArray = [];    
 
 function loadJson() {    
     return fetch('data/product.json')    
@@ -13,19 +10,14 @@ function loadJson() {
 
 function displayItems(items) {    
     const container = document.querySelector('.menuList');        
-    
-    length = items.length;
 
-    let newArray = [];    
-
-    for(let i=0; i<index; ++i)
+    const count = 10;
+    for(let i=0; i<count; ++i)
     {
         newArray[i] = items[i];
     }
 
     container.innerHTML = newArray.map( (item) => createHTMLString(item)).join('');    
-
-    return length;
 }
 
 function createHTMLString(item) {    
@@ -38,11 +30,64 @@ function createHTMLString(item) {
     `;
 }
 
-function createBtn() {
+function createBtn(items) {
+    const container = document.querySelector('.btn');
     
+    const limit = 10;
+    const length = Math.ceil(items.length / limit);
+    let count = 1;
+    
+    for(let i=0; i<length; ++i) {
+        let newBtn = document.createElement('button');
+
+        newBtn.setAttribute('value',count);
+        newBtn.textContent = count;
+
+        container.appendChild(newBtn);
+
+        ++count;
+    }
+
+    container.firstChild.style.color = 'blue';
+
+    container.addEventListener('click', event => onButtonClick(event,items));
 }
 
-loadJson()
-    .then(items => displayItems(items))
-    .then(length => createBtn(length))
+function onButtonClick(event,items) {
+    if(event.target.value === undefined) { return; }
+    
+    const container = document.querySelector('.btn');
+
+    let index   = event.target.value * 10;
+    let limit   = 10;
+    let current = index - limit;
+    let count   = 0;
+
+    if(index > items.length) { index = items.length; }
+
+    newArray = [];    
+
+    for(let i=current; i<index; ++i) {
+        newArray[count] = items[i];
+        ++count;
+    }
+
+    for(let child of container.childNodes) {
+        console.log(child);
+        child.style.color = 'black';
+    }
+
+    const menu = document.querySelector('.menuList');
+    menu.innerHTML = newArray.map( (item) => createHTMLString(item)).join('');    
+    
+    event.target.style.color = 'blue';    
+}
+
+export function menuLoad() {
+    loadJson()
+    .then(items => {
+        displayItems(items);
+        createBtn(items);
+    })
     .catch(console.log);
+}

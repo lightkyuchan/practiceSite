@@ -12,7 +12,9 @@
   --menulist-li-padding-left: 10px;
   --menulist-li-padding-bottom: 20px;
 
-  --menu-btn-padding-top: 60px;
+  --menu-btn-padding-top: 70px;
+
+  --btn-button-padding-left: 15px;
 }
 
 * {
@@ -51,6 +53,12 @@
   padding-top: var(--menu-btn-padding-top);
 }
 
-.menuList li span {
-  text-align: center;
+.btn button {
+  border: 0;
+  outline: 0;
+  padding-right: var(--btn-button-padding-left);
+}
+
+.btn button:hover {
+  cursor: pointer;
 }
