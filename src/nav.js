@@ -1,10 +1,5 @@
 'use strict';
 
-//처리해야할 순서?
-//1.json파일 생성(icon에 관한것들)
-//2.json파일 읽기
-//3.html에 뿌려주기
-
 class CreateHtmlString {    
     createHtmlString() { }
 }
@@ -56,21 +51,23 @@ function displayIcons(icons) {
     const _search = document.querySelector('.search');        
     const _navBtns = document.querySelector('.navBtns');
     
+    //logo search
     _logo.innerHTML = logo.createHtmlString(icons[0]);
     _search.innerHTML = search.createHtmlString(icons[1]);
 
-    const searchText = _search.firstElementChild;
-    
+    //search에 input가져오는거
+    const searchText = _search.firstElementChild;    
+    //input의 초기 값
     searchText.value = 'Search...';
 
-    const navBtn = icons.filter( (btn) => btn.type === 'btn' );
-    
+    //버튼들
+    const navBtn = icons.filter( (btn) => btn.type === 'btn' );    
     _navBtns.innerHTML = navBtn.map( (btn) => navBtns.createHtmlString(btn));
 }
 
+//헨들링?? main에서 써주기위해 export
 export function load()
 {
-    console.log('aaaaa');
     loadJson()
     .then(icons => {
         displayIcons(icons);

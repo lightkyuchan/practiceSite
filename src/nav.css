@@ -24,6 +24,10 @@
   --nav-search-icon-margin-left: -40px;
   --nav-search-icon-color: #4f5b66;
   --nav-search-icon-size: 30px;
+
+  /* btns */
+  --nav-navBtn-li-padding-right: 15px;
+  --nav-navBtn-li-img-size: 40px;
 }
 
 * {
@@ -86,10 +90,10 @@ li {
 }
 
 .navBtns li {
-  padding-right: 15px;
+  padding-right: var(--nav-navBtn-li-padding-right);
 }
 
 .navBtns li img {
-  width: 40px;
-  height: 40px;
+  width: var(--nav-navBtn-li-img-size);
+  height: var(--nav-navBtn-li-img-size);
 }

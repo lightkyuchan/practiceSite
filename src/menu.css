@@ -1,0 +1,56 @@
+:root {
+  /* menu */
+  --menu-width: 80%;
+  --menu-height: 100vh;
+  --menu-padding-top: 40px;
+
+  /* menulist */
+  --menulist-width: 100%;
+  --menulist-height: 80%;
+
+  --menulist-li-width: 20%;
+  --menulist-li-padding-left: 10px;
+  --menulist-li-padding-bottom: 20px;
+
+  --menu-btn-padding-top: 60px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  width: var(--menu-width);
+  height: var(--menu-height);
+  padding-top: var(--menu-padding-top);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuList {
+  width: var(--menulist-width);
+  height: var(--menulist-height);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menuList li {
+  width: var(--menulist-li-width);
+  padding-left: var(--menulist-li-padding-left);
+  padding-bottom: var(--menulist-li-padding-bottom);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  text-align: center;
+  padding-top: var(--menu-btn-padding-top);
+}
+
+.menuList li span {
+  text-align: center;
+}
