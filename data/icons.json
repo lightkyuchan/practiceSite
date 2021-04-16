@@ -1,0 +1,24 @@
+{
+    "icons": [
+
+        {
+            "type": "logo",
+            "icon": "/img/logo.png"
+        },
+
+        {
+            "type": "search",
+            "icon": "/img/search.png"
+        },
+        
+        {
+            "type": "btn",
+            "icon": "/img/basket.png"
+        },
+        
+        {
+            "type": "btn",
+            "icon": "/img/user.png"
+        }
+    ]
+}
