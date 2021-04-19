@@ -18,7 +18,8 @@
         
         {
             "type": "btn",
-            "icon": "/img/user.png"
+            "icon": "/img/user.png",
+            "link": "/SignIn.html"
         }
     ]
 }

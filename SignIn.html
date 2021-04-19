@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/nav.css">
+    <link rel="stylesheet" href="src/login.css">
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/nav.js" defer></script>
+    <script src="src/login.js" defer></script>
+    
+    <title>Document</title>
+</head>
+<body>
+  <nav>      
+    <div class="navBar">
+      <div class="logo"></div>
+      <div class="search"></div>
+      <ul class="navBtns"></ul>
+    </div>    
+  </nav>
+
+  <div>
+  <!--로그인-->  
+  <section>
+    <div class="login">
+      <div class="title"><h2>LOGIN TO YOUR ACCOUNT</h2>
+      </div>
+      <div class="text">
+          <div class="email">
+            <label for="inputEmail">Email Address</label>
+            <input id="inputEmail" type="text" value="Email Address">          
+          </div>
+          <div class="password">
+            <label for="inputPw">Password</label>
+            <input id="inputPw" type="text" value="Password">          
+          </div>
+          <div class="submit">
+             <button>SUBMIT</button>
+          </div>
+
+          <span id="customer">----------------NEW CUSTOMER"---------------<span>
+          <div class="register">
+            <button>Register</button>
+          </div>
+      </div>
+    </div>
+  </section>  
+
+  <!--회원가입-->
+  <section>
+    <div class="join">
+      <div class="title">
+        <span><h2>CREATE YOUR ACCOUNT</h2></span>
+      </div>
+
+      <div class="form">
+        <label for="">Name</label>
+        <input type="text" value="Name">
+        <label for="">Email Address</label>
+        <input name="email" type="text" value="Email Address">
+        <label for="">Password</label>
+        <input type="text" value="Password" name="password">
+        <label for="" >Confirm Password</label>
+        <input type="text" value="Confirm Password" name="confirm">
+        <button id="joinBtn">SUBMIT</button>
+      </div>
+
+      <span>ALREADY HAVE AN ACCOUNT?</span>
+      <div class="signin">
+        <button id="singIn">Sign In</button>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

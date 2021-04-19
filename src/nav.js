@@ -28,7 +28,7 @@ class NavBtns extends CreateHtmlString {
     createHtmlString(icon) {
         return `
         <li>
-          <a href="#"><img src=${icon.icon} alt=${icon.type}></a>
+          <a href=${icon.link}><img src=${icon.icon} alt=${icon.type}></a>
         </li>
         `;
     }
