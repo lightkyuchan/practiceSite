@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/nav.css">    
+    <link rel="stylesheet" href="src/product.css">
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/nav.js" defer></script>
+    <script src="src/product.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+  <nav>      
+    <div class="navBar">
+      <div class="logo"></div>
+      <div class="search"></div>
+      <ul class="navBtns"></ul>
+    </div>    
+  </nav>
+
+  <div class="container">
+    <div class="inner">
+      <div class="product">
+        <div class="productInfo">
+          <span ><h2 id="info">info</h2></span>
+          <span id="price">가격</span>
+          <span id="instock">In Stock</span>
+          <div class="btns">            
+            <select name="count" id="">
+              <option value="1" selected>1</option>
+              <option value="2" selected>2</option>
+              <option value="3" selected>3</option>
+            </select>
+            <button>담기</button>
+          </div>
+        </div>
+
+      <div class="img">
+        <img src="img/product1.png" alt="">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

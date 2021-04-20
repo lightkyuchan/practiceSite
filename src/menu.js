@@ -23,9 +23,9 @@ function displayItems(items) {
 function createHTMLString(item) {    
     return `
         <li>
-            <img src=${item.image} alt="product">
-            <span>${item.info}</span>
-            <span>${item.price}</span>
+            <img class="product" src=${item.image} alt="product">
+            <span class="product">${item.info}</span>
+            <span class="product">${item.price}</span>
         </li>
     `;
 }
@@ -96,7 +96,7 @@ export function menuLoad() {
     loadJson()
     .then(items => {
         displayItems(items);
-        createBtn(items);
+        createBtn(items);                
     })
     .catch(console.log);
 }

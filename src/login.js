@@ -92,6 +92,4 @@ function join() {
     if(email === false) { console.log('email bad');  }
 }
 
-
-
 setEventListener();

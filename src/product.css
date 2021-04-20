@@ -1,0 +1,64 @@
+:root {
+  --inner-width: 80%;
+  --product-margin: 10%;
+  --productInfo-width: 40%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.inner {
+  width: var(--inner-width);
+  margin: 0 auto;
+
+  border-bottom: 2px solid black;
+}
+
+.product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--product-margin);
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  width: var(--productInfo-width);
+}
+
+.productInfo span {
+  padding-bottom: 10px;
+}
+
+#instock {
+  color: green;
+}
+
+.btns {
+  width: 250px;
+  height: 30px;
+  display: flex;
+}
+
+.btns select {
+  width: 100%;
+  height: 100%;
+}
+
+.btns button {
+  width: 100%;
+  height: 100%;
+  margin-left: 8px;
+}
+
+.img {
+  width: 20%;
+}
+
+.img img {
+  width: 100%;
+}
