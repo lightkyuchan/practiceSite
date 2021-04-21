@@ -2,7 +2,7 @@
 
 let newArray = [];    
 
-function loadJson() {    
+export function loadJson() {    
     return fetch('data/product.json')    
     .then(response => response.json())    
     .then(json => json.items);
@@ -20,7 +20,7 @@ function displayItems(items) {
     container.innerHTML = newArray.map( (item) => createHTMLString(item)).join('');    
 }
 
-function createHTMLString(item) {    
+function createHTMLString(item) {         
     return `
         <li>
             <img class="product" src=${item.image} alt="product">
@@ -99,4 +99,30 @@ export function menuLoad() {
         createBtn(items);                
     })
     .catch(console.log);
+}
+
+export function search(text) {
+    const txt = text.replace(/(\s*)/g, "");
+    
+    loadJson()
+    .then(items => {
+        searchHTML(items,text);
+    })
+    .catch(console.log);
+}
+
+function searchHTML(items,text) {
+    newArray  = [];
+    let count = 0;
+
+    items.filter( item => {
+        if(item.info === text) {
+            newArray[count] = item;
+            ++count;
+        }
+    });
+    
+    const menu     = document.querySelector('.menuList');
+    menu.innerHTML = newArray.map( (item) => createHTMLString(item)).join('');    
+    
 }
